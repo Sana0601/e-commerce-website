@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div class="logo">ShopEase</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="cart-btn" onclick="openCart()">
+            🛒 Cart <span id="cart-count">0</span>
+        </button>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Shop Smart. Shop Simple.</h1>
+            <p>Find quality products at affordable prices.</p>
+            <a href="#products" class="shop-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <h2>Our Products</h2>
+        <p class="subtitle">Explore our latest collection</p>
+
+        <div class="product-grid" id="product-list"></div>
+    </section>
+
+    <!-- Cart -->
+    <div class="cart" id="cart">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button onclick="closeCart()">✕</button>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <div class="cart-footer">
+            <h3>Total: ₹<span id="cart-total">0</span></h3>
+            <button class="checkout" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+    <!-- Footer -->
+    <footer id="about">
+        <h3>ShopEase</h3>
+        <p>Simple shopping. Better experience.</p>
+        <p>© 2026 ShopEase</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
